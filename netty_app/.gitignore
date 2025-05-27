@@ -1,0 +1,61 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+*.pidb
+*.svd
+
+# Auto-generated files
+*.log
+*.vspscc
+*.vssscc
+
+# ASP.NET Core
+wwwroot/
+
+# Publish output
+publish/
+*.Publish.xml
+
+# Visual Studio Code settings
+.vscode/
+
+# npm packages (if you have node_modules)
+node_modules/
+
+# Rider project files
+.idea/
+
+# JetBrains Rider
+*.sln.iml
+
+# Resharper
+_ReSharper*/
+
+# DotCover
+*.dotCover
+
+# Mac OS system files
+.DS_Store
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment variables file
+.env
+
+# Tailwind output CSS
+# wwwroot/css/site.css
+
+*.cache
+*.sqlite
+*.db
+
+# Ignore local launch settings
+Properties/launchSettings.json
