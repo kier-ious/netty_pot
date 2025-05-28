@@ -14,8 +14,8 @@ obj/
 *.vspscc
 *.vssscc
 
-# ASP.NET Core
-wwwroot/
+# # ASP.NET Core
+# wwwroot/
 
 # Publish output
 publish/
@@ -59,3 +59,4 @@ yarn-error.log*
 
 # Ignore local launch settings
 Properties/launchSettings.json
+node_modules/

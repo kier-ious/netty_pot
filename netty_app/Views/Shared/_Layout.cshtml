@@ -1,60 +1,55 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] Kier.NET</title>
+    <title>@ViewData["Title"] - Kier.NET</title>
 
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
-    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <body class="h-full flex flex-col m-0 p-0">
+
+    <!-- Fixed Header -->
+    <header style="background-color: #3690B2;"  class="fixed top-0 w-full bg-blue-500 text-white py-6 px-4 z-10 shadow-lg">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">The Osage Nation</h1>
+        <button class="md:hidden text-white focus:outline-none" aria-label="Toggle navigation">
+            <!-- Hamburger Icon -->
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <nav class="hidden md:flex space-x-6 text-lg">
+            <a href="/" class="hover:text-gray-300">Home</a>
+            <a href="/Home" class="hover:text-gray-300"></a>
         </nav>
+        </div>
     </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
+    <!-- Main Content -->
+    <main class="flex-1 mt-[9px] overflow-y-auto">
+        @* <div class="max-w-screen-xl mx-auto px-4"> *@
+        @RenderBody()
 
-            <!-- Hero Section -->
-            <div class="h-screen bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/images/grass-field.png')] flex items-center justify-center">
-                <div class="space-y-4 text-white text-center">
-                    <div class="bg-black/60 p-8 rounded-xl text-2xl">Welcome to Kier.NET</div>
-                    <div class="bg-black/60 p-8 rounded-xl text-2xl">This is a parallax demo.</div>
-                </div>
+        <!-- Hero Section -->
+        <div class="w-full h-screen bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/images/2021-1209-Chief_Claremore.webp')] flex items-center justify-end px-10">
+            <div class="space-y-4 text-white text-center">
+            <div class="bg-black/60 p-8 rounded-xl text-4xl font-bold">Osage Nation</div>
+            <div class="bg-black/60 p-8 rounded-xl text-4xl font-bold">Services</div>
+
             </div>
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted text-center">
-        <div class="container">
-            &copy; 2025 - Casting a .NET
         </div>
-    </footer>
+        </div>
+    </main>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Fixed Footer -->
+    @* <footer style="background-color: #3690B2;"  class="fixed bottom-0 w-full bg-gray-800 text-white py-6 px-4 z-10 shadow-inner">
+        <div class="text-center">
+
+        <p class="text-lg">&copy; 2025 - Casting a .NET</p>
+        </div>
+    </footer> *@
+
     @await RenderSectionAsync("Scripts", required: false)
-</body>
+    </body>
 </html>
