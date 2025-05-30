@@ -7,49 +7,129 @@
 
     <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
 </head>
-    <body class="h-full flex flex-col m-0 p-0">
+<body class="h-full flex flex-col m-0 p-0">
 
-    <!-- Fixed Header -->
-    <header style="background-color: #3690B2;"  class="fixed top-0 w-full bg-blue-500 text-white py-6 px-4 z-10 shadow-lg">
-        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+<!-- Fixed Header -->
+<!-- Fixed Header -->
+<header style="background-color: #3690B2;" class="fixed top-0 w-full bg-blue-500 text-white py-6 px-4 z-10 shadow-lg">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+        <div class="flex flex-col">
         <h1 class="text-2xl font-bold">The Osage Nation</h1>
-        <button class="md:hidden text-white focus:outline-none" aria-label="Toggle navigation">
-            <!-- Hamburger Icon -->
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-        <nav class="hidden md:flex space-x-6 text-lg">
-            <a href="/" class="hover:text-gray-300">Home</a>
-            <a href="/Home" class="hover:text-gray-300"></a>
-        </nav>
+        <p class="text-lg font-semibold osage">𐓏𐓘𐓻𐓘𐓻𐓟</p>
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="flex-1 mt-[9px] overflow-y-auto">
-        @* <div class="max-w-screen-xl mx-auto px-4"> *@
-        @RenderBody()
+        <button class="md:hidden text-white focus:outline-none" aria-label="Toggle navigation">
+        <!-- Hamburger Icon -->
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        </button>
 
-        <!-- Hero Section -->
-        <div class="w-full h-screen bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/images/2021-1209-Chief_Claremore.webp')] flex items-center justify-end px-10">
-            <div class="space-y-4 text-white text-center">
+        <nav class="hidden md:flex items-center space-x-6 text-lg">
+            <img src="/images/ONseal.png" alt="Osage " class="h-16 w-16 object-contain" />
+        </nav>
+    </div>
+</header>
+
+
+<!-- Main Content -->
+<main class="flex-1 mt-[9px] overflow-y-auto">
+    @RenderBody()
+
+    <!-- Hero Section -->
+    <div class="w-full h-screen bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/images/2021-1209-Chief_Claremore.webp')] flex items-center justify-end px-10">
+        <div class="space-y-4 text-white text-center">
             <div class="bg-black/60 p-8 rounded-xl text-4xl font-bold">Osage Nation</div>
             <div class="bg-black/60 p-8 rounded-xl text-4xl font-bold">Services</div>
+        </div>
+    </div>
 
+    <!-- News & Updates Section -->
+    <section class="bg-gray-100 py-12 px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">News & Events</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <article class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2">Osage Nation Visitors center Announces Mural Ribbon Cutting and Artist Talk</h3>
+                <p class="text-gray-700 text-sm mb-4">Posted on May 27, 2025</p>
+                <p class="text-gray-600">The Osage Nation Visitors center initial-scale excited to Announced a ribbon-cutting ceremony for A newly completed exterior</p>
+            </article>
+            <article class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2">Osage Nation Summer 2025 food Services Programs Launches June 3rd</h3>
+                <p class="text-gray-700 text-sm mb-4">Posted on May 22, 2025</p>
+                <p class="text-gray-600">Sheld-stable breakfast and Launches meals available for those 18 years and younger - Osage Nation Social</p>
+            </article>
+            <article class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2">Osage Nation Housing Department Cultural form Contractors</h3>
+                <p class="text-gray-700 text-sm mb-4">Posted on May 27, 2025</p>
+                <p class="text-gray-600">The Osage Nation Housing Department assists overflow-y-auto clients initial-scale achieving and elevated standard of living through Home improvemnts and homeownership opportunities.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Events List -->
+    <section class="bg-white py-12 px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">Upcoming Events</h2>
+        <ul class="space-y-6 max-w-3xl mx-auto">
+            <li class="border-l-4 border-blue-500 pl-4">
+                <p class="text-sm text-gray-500">July 19, 2025</p>
+                <h3 class="text-xl font-semibold">E. Sean Standing Bear Museum Lecture | Osage Roach Headdress</h3>
+            </li>
+            <li class="border-l-4 border-green-500 pl-4">
+                <p class="text-sm text-gray-500">August 16, 2025</p>
+                <h3 class="text-xl font-semibold">E. Sean Standing Bear Museum Lecture | Osage Foodways - Wooden mortar and pestle</h3>
+            </li>
+            <li class="border-l-4 border-yellow-500 pl-4">
+                <p class="text-sm text-gray-500">September 20, 2025</p>
+                <h3 class="text-xl font-semibold">E. Sean Standing Bear Museum Lecture | Drum Creek Treaty Pen</h3>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Services Directory -->
+    <section class="bg-gray-50 py-12 px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">Services Directory</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 shadow rounded-lg">
+                <h3 class="text-xl font-semibold mb-2">Health Services</h3>
+                <p class="text-gray-600">Primary care, dental, behavioral health, and more.</p>
+            </div>
+            <div class="bg-white p-6 shadow rounded-lg">
+                <h3 class="text-xl font-semibold mb-2">Housing Assistance</h3>
+                <p class="text-gray-600">Affordable housing and repair programs.</p>
+            </div>
+            <div class="bg-white p-6 shadow rounded-lg">
+                <h3 class="text-xl font-semibold mb-2">Employment</h3>
+                <p class="text-gray-600">Networking Events and job coaching.</p>
             </div>
         </div>
-        </div>
-    </main>
+    </section>
 
-    <!-- Fixed Footer -->
-    @* <footer style="background-color: #3690B2;"  class="fixed bottom-0 w-full bg-gray-800 text-white py-6 px-4 z-10 shadow-inner">
-        <div class="text-center">
+    <!-- Contact Form -->
+    <section class="bg-white py-12 px-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">Contact Us</h2>
+        <form class="max-w-2xl mx-auto space-y-6" action="#" method="POST">
+            <div>
+                <label class="block text-sm font-medium mb-1" for="name">Name</label>
+                <input type="text" name="name" id="name" class="w-full border border-gray-300 rounded px-4 py-2">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-1" for="email">Email</label>
+                <input type="email" name="email" id="email" class="w-full border border-gray-300 rounded px-4 py-2">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-1" for="message">Message</label>
+                <textarea name="message" id="message" rows="5" class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
+            </div>
+            <button
+                type="submit"
+                class="text-white px-6 py-2 rounded hover:opacity-90"
+                style="background-color: #3690B2;"
+                >Send Message
+            </button>
+        </form>
+    </section>
+</main>
 
-        <p class="text-lg">&copy; 2025 - Casting a .NET</p>
-        </div>
-    </footer> *@
-
-    @await RenderSectionAsync("Scripts", required: false)
-    </body>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
 </html>
